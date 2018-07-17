@@ -1,0 +1,35 @@
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+
+必须从本地访问！    </body>
+</html>
+
+
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+
+<?php 
+//print_r($_SERVER);
+$arr=explode(',',$_SERVER['HTTP_X_FORWARDED_FOR']);
+if($arr[0]=='127.0.0.1'){
+    //key
+    echo "key is ^&*(UIHKJjkadshf";
+}else{
+	echo "必须从本地访问！";
+}
+?>    </body>
+</html>
+
+
+
+<?php
+//SAE 服务调整,该题目无法继续...可尝试自行搭建环境测试.
+echo file_get_contents(__FILE__);
